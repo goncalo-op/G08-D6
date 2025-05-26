@@ -1,0 +1,15 @@
+# Python
+venv/
+*.pyc
+__pycache__/
+
+# Databases
+/mnt/db/*.db
+
+# ZIPs and Hashes
+*.zip
+*.txt
+
+# Sensitive
+certs/server.key
+vpn/*.ovpn

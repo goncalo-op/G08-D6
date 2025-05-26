@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <title>SafeCloud - Armazenamento Seguro</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Estilo personalizado -->
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+
+    a.btn {
+      transition: all 0.3s ease-in-out;
+    }
+
+    a.btn:hover {
+      transform: scale(1.05);
+    }
+
+    img {
+      transition: transform 0.3s;
+    }
+
+    img:hover {
+      transform: scale(1.05);
+    }
+
+    .feature-icon {
+      inline-size: 80px;
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm fixed-top">
+  <div class="container">
+    <a class="navbar-brand fw-bold text-primary" href="#">SafeCloud</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item"><a class="nav-link" href="#inicio">Início</a></li>
+        <li class="nav-item"><a class="nav-link" href="#sobre">Sobre Nós</a></li>
+        <li class="nav-item"><a class="nav-link" href="login.html">Login</a></li>
+        <li class="nav-item"><a class="nav-link" href="register.html">Registo</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO SECTION -->
+<header class="text-white d-flex align-items-center" style="min-block-size: 100vh; background: linear-gradient(135deg, #007bff, #66b2ff);" id="inicio">
+  <div class="container mt-5 pt-5">
+    <div class="row align-items-center">
+      <!-- Texto -->
+      <div class="col-md-6">
+        <h1 class="display-5 fw-bold">Armazena os teus ficheiros com confiança</h1>
+        <p class="lead">A SafeCloud protege os teus dados com encriptação de ponta-a-ponta, armazenamento distribuído e autenticação personalizada.</p>
+        <ul class="list-unstyled mb-4">
+          <li> Segurança de ponta com AES + RSA</li>
+          <li> Armazenamento em múltiplas clouds</li>
+          <li> Interface limpa e intuitiva</li>
+          <li> Total controlo e privacidade</li>
+        </ul>
+        <a href="register.html" class="btn btn-light btn-lg me-2">Novo Registro</a>
+        <a href="login.html" class="btn btn-outline-light btn-lg">Login</a>
+      </div>
+
+      <!-- Imagem -->
+      <div class="col-md-6 text-center mt-4 mt-md-0">
+        <img src="/home/salithekid/Desktop/Projeto3Cadeiras/static/images/hero-cloud.png" alt="Profissional" class="img-fluid rounded shadow-sm" style="max-inline-size: 400px;">
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- FEATURES -->
+<section class="py-5 bg-white">
+  <div class="container">
+    <div class="row text-center">
+      <div class="col-md-4 mb-4">
+        <img src="/home/salithekid/Desktop/Projeto3Cadeiras/static/images/feature-cifra.png" alt="Ícone Cifra" class="feature-icon mb-3">
+        <h4 class="text-primary">Cifra Avançada</h4>
+        <p>Todos os ficheiros são encriptados com padrões de segurança modernos como AES e RSA.</p>
+      </div>
+      <div class="col-md-4 mb-4">
+        <img src="/home/salithekid/Desktop/Projeto3Cadeiras/static/images/feature-multicloud.png" alt="Ícone Multi-cloud" class="feature-icon mb-3">
+        <h4 class="text-primary">Multi-cloud</h4>
+        <p>Os teus dados podem ser distribuídos entre diferentes serviços de cloud, garantindo redundância e fiabilidade.</p>
+      </div>
+      <div class="col-md-4 mb-4">
+        <img src="/home/salithekid/Desktop/Projeto3Cadeiras/static/images/feature-easy.png" alt="Ícone Simples" class="feature-icon mb-3">
+        <h4 class="text-primary">Fácil de Usar</h4>
+        <p>Interface intuitiva e acessível — qualquer utilizador pode enviar e 
+          recuperar ficheiros com segurança.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SOBRE -->
+<section id="sobre" class="bg-light py-5">
+  <div class="container text-center">
+    <h2 class="text-primary mb-4">Sobre a SafeCloud</h2>
+    <p class="lead">
+     A SafeCloud nasceu da necessidade de proteger documentos pessoais e profissionais contra perdas, ataques e acessos indevidos.
+     O sistema aplica criptografia híbrida (AES + RSA), distribuindo segurança em várias camadas.
+     Ideal para estudantes, empresas e qualquer pessoa que valoriza a privacidade digital.
+    </p>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="bg-primary text-white text-center py-4 mt-5">
+  <div class="container">
+    <p class="fw-bold mb-1">SafeCloud</p>
+    <div class="mb-2">
+      <a href="index.html" class="text-white text-decoration-none me-3">Início</a>
+      <a href="login.html" class="text-white text-decoration-none me-3">Login</a>
+      <a href="register.html" class="text-white text-decoration-none me-3">Registo</a>
+      <a href="#sobre" class="text-white text-decoration-none">Sobre Nós</a>
+    </div>
+    <small>&copy; 2025 SafeCloud. Todos os direitos reservados.</small>
+  </div>
+</footer>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

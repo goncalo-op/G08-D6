@@ -1,0 +1,47 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: fragment-db-3
+  namespace: default
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: fragment-db-3
+  template:
+    metadata:
+      labels:
+        app: fragment-db-3
+    spec:
+      containers:
+      - name: sqlite
+        image: household/sqlite3:custom
+        volumeMounts:
+        - name: data
+          mountPath: /data
+        resources:
+          requests:
+            cpu: "100m"
+            memory: "256Mi"
+          limits:
+            cpu: "500m"
+            memory: "512Mi"
+      volumes:
+      - name: data
+        hostPath:
+          path: /mnt/db/fragment3.db
+          type: File
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: fragment-db-3-service
+  namespace: default
+spec:
+  selector:
+    app: fragment-db-3
+  ports:
+  - protocol: TCP
+    port: 80
+    targetPort: 80
+  type: ClusterIP

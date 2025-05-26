@@ -1,0 +1,47 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: certs-db
+  namespace: default
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: certs-db
+  template:
+    metadata:
+      labels:
+        app: certs-db
+    spec:
+      containers:
+      - name: sqlite
+        image: household/sqlite3:custom
+        volumeMounts:
+        - name: data
+          mountPath: /data
+        resources:
+          requests:
+            cpu: "100m"
+            memory: "256Mi"
+          limits:
+            cpu: "500m"
+            memory: "512Mi"
+      volumes:
+      - name: data
+        hostPath:
+          path: /mnt/db/certs.db
+          type: File
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: certs-db-service
+  namespace: default
+spec:
+  selector:
+    app: certs-db
+  ports:
+  - protocol: TCP
+    port: 80
+    targetPort: 80
+  type: ClusterIP

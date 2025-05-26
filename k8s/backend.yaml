@@ -1,0 +1,64 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: backend
+  namespace: default
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: backend
+  template:
+    metadata:
+      labels:
+        app: backend
+    spec:
+      containers:
+      - name: backend
+        image: python:3.9
+        command: ["/bin/sh", "-c"]
+        args:
+        - |
+          pip install flask bcrypt &&
+          mkdir -p /app/Uploads &&
+          ls -l /app/app.py || echo "app.py not found" &&
+          ls -l /app/templates/index.html || echo "index.html not found" &&
+          sleep 20 &&
+          python3 /app/app.py
+        volumeMounts:
+        - name: app
+          mountPath: /app
+        - name: db
+          mountPath: /mnt/db
+        ports:
+        - containerPort: 5000
+        resources:
+          requests:
+            cpu: "200m"
+            memory: "512Mi"
+          limits:
+            cpu: "1000m"
+            memory: "1024Mi"
+      volumes:
+      - name: app
+        hostPath:
+          path: /home/salithekid/Desktop/Projeto3Cadeiras
+          type: Directory
+      - name: db
+        hostPath:
+          path: /mnt/db
+          type: Directory
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: backend-service
+  namespace: default
+spec:
+  selector:
+    app: backend
+  ports:
+  - protocol: TCP
+    port: 5000
+    targetPort: 5000
+  type: NodePort

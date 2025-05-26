@@ -1,0 +1,20 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: ipsec-config
+data:
+  ipsec.conf: |
+    conn vpn
+        left=%any
+        leftsubnet=10.0.0.0/16
+        right=%any
+        rightsubnet=0.0.0.0/0
+        type=tunnel
+        keyexchange=ikev2
+        authby=pubkey
+        leftcert=example.local.crt
+        leftid=example.local
+        ike=aes256gcm16-sha384-modp3072
+        esp=aes256gcm16-sha384
+  ipsec.secrets: |
+    : RSA example.local.key

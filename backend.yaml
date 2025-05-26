@@ -1,0 +1,51 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: backend-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: backend
+  template:
+    metadata:
+      labels:
+        app: backend
+    spec:
+      containers:
+      - name: backend
+        image: python:3.9
+        command: ["sh", "-c", "pip install flask psycopg2-binary && python /app/server.py"]
+        ports:
+        - containerPort: 8000
+        volumeMounts:
+        - name: app
+          mountPath: /app
+        - name: certs
+          mountPath: /certs
+        resources:
+          requests:
+            cpu: "100m"
+            memory: "128Mi"
+          limits:
+            cpu: "250m"
+            memory: "256Mi"
+      volumes:
+      - name: app
+        hostPath:
+          path: /home/salithekid/Desktop/Projeto3Cadeiras
+      - name: certs
+        hostPath:
+          path: /home/salithekid/Desktop/Projeto3Cadeiras/certs
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: backend-service
+spec:
+  selector:
+    app: backend
+  ports:
+  - protocol: TCP
+    port: 8000
+    targetPort: 8000

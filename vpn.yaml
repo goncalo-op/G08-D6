@@ -1,0 +1,74 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: vpn-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: vpn
+  template:
+    metadata:
+      labels:
+        app: vpn
+    spec:
+      containers:
+      - name: strongswan
+        image: strongswan/strongswan
+        securityContext:
+          privileged: true
+        volumeMounts:
+        - name: ipsec-config
+          mountPath: /etc/ipsec.conf
+          subPath: ipsec.conf
+        - name: ipsec-secrets
+          mountPath: /etc/ipsec.secrets
+          subPath: ipsec.secrets
+        - name: certs
+          mountPath: /etc/ipsec.d/certs
+        - name: certs
+          mountPath: /etc/ipsec.d/cacerts
+        - name: certs
+          mountPath: /etc/ipsec.d/private
+        resources:
+          requests:
+           cpu: "100m"
+           memory: "128Mi"
+          limits:
+           cpu: "250m"
+           memory: "256Mi"
+      volumes:
+      - name: ipsec-config
+        configMap:
+          name: ipsec-config
+          items:
+          - key: ipsec.conf
+            path: ipsec.conf
+      - name: ipsec-secrets
+        configMap:
+          name: ipsec-config
+          items:
+          - key: ipsec.secrets
+            path: ipsec.secrets
+      - name: certs
+        hostPath:
+          path: /home/salithekid/Desktop/Projeto3Cadeiras/certs
+          type: Directory
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: vpn-service
+spec:
+  selector:
+    app: vpn
+  ports:
+  - protocol: UDP
+    port: 500
+    targetPort: 500
+    name: ike
+  - protocol: UDP
+    port: 4500
+    targetPort: 4500
+    name: nat
+  type: NodePort

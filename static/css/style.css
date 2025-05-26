@@ -1,0 +1,11 @@
+body {
+  font-family: Arial, sans-serif;
+}
+
+h1 {
+  color: #0d6efd;
+}
+
+p.lead {
+  margin-bottom: 30px;
+}

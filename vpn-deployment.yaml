@@ -1,0 +1,76 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: vpn-deployment
+  labels:
+    app: vpn
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: vpn
+  template:
+    metadata:
+      labels:
+        app: vpn
+    spec:
+      containers:
+      - name: vpn
+        image: vimagick/strongswan:latest
+        ports:
+        - containerPort: 500
+          protocol: UDP
+        - containerPort: 4500
+          protocol: UDP
+        securityContext:
+          privileged: true
+        volumeMounts:
+        - mountPath: /etc/ipsec.conf
+          name: ipsec-config
+        - mountPath: /etc/ipsec.secrets
+          name: ipsec-secrets
+        - mountPath: /etc/ipsec.d/certs/server.crt
+          name: server-cert
+        - mountPath: /etc/ipsec.d/private/server.key
+          name: server-key
+        - mountPath: /etc/ipsec.d/cacerts/ca.crt
+          name: ca-cert
+      volumes:
+      - name: ipsec-config
+        hostPath:
+          path: /mnt/certs/server_ipsec.conf
+          type: File
+      - name: ipsec-secrets
+        hostPath:
+          path: /mnt/certs/server_ipsec.secrets
+          type: File
+      - name: server-cert
+        hostPath:
+          path: /mnt/certs/example.local.crt
+          type: File
+      - name: server-key
+        hostPath:
+          path: /mnt/certs/example.local.key
+          type: File
+      - name: ca-cert
+        hostPath:
+          path: /mnt/certs/ca.crt
+          type: File
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: vpn-service
+spec:
+  selector:
+    app: vpn
+  ports:
+  - name: ike
+    port: 500
+    protocol: UDP
+    nodePort: 30500
+  - name: nat
+    port: 4500
+    protocol: UDP
+    nodePort: 30450
+  type: NodePort

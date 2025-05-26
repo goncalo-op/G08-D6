@@ -1,0 +1,435 @@
+checking for a BSD-compatible install... /usr/bin/install -c
+checking whether build environment is sane... yes
+checking for a race-free mkdir -p... /usr/bin/mkdir -p
+checking for gawk... gawk
+checking whether make sets $(MAKE)... yes
+checking whether make supports nested variables... yes
+checking whether UID '1000' is supported by ustar format... yes
+checking whether GID '1000' is supported by ustar format... yes
+checking how to create a ustar tar archive... gnutar
+checking whether make supports nested variables... (cached) yes
+checking for pkg-config... no
+checking for a sed that does not truncate output... /usr/bin/sed
+checking configured UDP ports (500, 4500)... ok
+checking for gcc... gcc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether the compiler supports GNU C... yes
+checking whether gcc accepts -g... yes
+checking for gcc option to enable C11 features... none needed
+checking whether gcc understands -c and -o together... yes
+checking whether make supports the include directive... yes (GNU style)
+checking dependency style of gcc... gcc3
+checking build system type... x86_64-pc-linux-gnu
+checking host system type... x86_64-pc-linux-gnu
+checking 32-bit host C ABI... no
+checking how to run the C preprocessor... gcc -E
+checking for grep that handles long lines and -e... /usr/bin/grep
+checking for egrep... /usr/bin/grep -E
+checking for ELF binary format... yes
+checking for the common suffixes of directories in the library search path... lib,lib,lib64
+checking for stdio.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for strings.h... yes
+checking for sys/stat.h... yes
+checking for sys/types.h... yes
+checking for unistd.h... yes
+checking whether byte ordering is bigendian... no
+checking how to print strings... printf
+checking for a sed that does not truncate output... (cached) /usr/bin/sed
+checking for fgrep... /usr/bin/grep -F
+checking for ld used by gcc... /usr/bin/ld
+checking if the linker (/usr/bin/ld) is GNU ld... yes
+checking for BSD- or MS-compatible name lister (nm)... /usr/bin/nm -B
+checking the name lister (/usr/bin/nm -B) interface... BSD nm
+checking whether ln -s works... yes
+checking the maximum length of command line arguments... 1572864
+checking how to convert x86_64-pc-linux-gnu file names to x86_64-pc-linux-gnu format... func_convert_file_noop
+checking how to convert x86_64-pc-linux-gnu file names to toolchain format... func_convert_file_noop
+checking for /usr/bin/ld option to reload object files... -r
+checking for file... file
+checking for objdump... objdump
+checking how to recognize dependent libraries... pass_all
+checking for dlltool... no
+checking how to associate runtime and link libraries... printf %s\n
+checking for ar... ar
+checking for archiver @FILE support... @
+checking for strip... strip
+checking for ranlib... ranlib
+checking command to parse /usr/bin/nm -B output from gcc object... ok
+checking for sysroot... no
+checking for a working dd... /usr/bin/dd
+checking how to truncate binary pipes... /usr/bin/dd bs=4096 count=1
+checking for mt... mt
+checking if mt is a manifest tool... no
+checking for dlfcn.h... yes
+checking for objdir... .libs
+checking if gcc supports -fno-rtti -fno-exceptions... no
+checking for gcc option to produce PIC... -fPIC -DPIC
+checking if gcc PIC flag -fPIC -DPIC works... yes
+checking if gcc static flag -static works... yes
+checking if gcc supports -c -o file.o... yes
+checking if gcc supports -c -o file.o... (cached) yes
+checking whether the gcc linker (/usr/bin/ld -m elf_x86_64) supports shared libraries... yes
+checking whether -lc should be explicitly linked in... no
+checking dynamic linker characteristics... GNU/Linux ld.so
+checking how to hardcode library paths into programs... immediate
+checking whether stripping libraries is possible... yes
+checking if libtool supports shared libraries... yes
+checking whether to build shared libraries... yes
+checking whether to build static libraries... no
+checking for egrep... (cached) /usr/bin/grep -E
+checking for gawk... (cached) gawk
+checking for flex... flex
+checking for lex output file root... lex.yy
+checking for lex library... none needed
+checking whether yytext is a pointer... yes
+checking for bison... no
+checking for byacc... no
+checking for python... /usr/bin/python
+checking for python version... 3.13
+checking for python platform... linux
+checking for GNU default python prefix... ${prefix}
+checking for GNU default python exec_prefix... ${exec_prefix}
+checking for python script directory (pythondir)... ${PYTHON_PREFIX}/lib/python3.13/site-packages
+checking for python extension module directory (pyexecdir)... ${PYTHON_EXEC_PREFIX}/lib/python3.13/site-packages
+checking for perl... /usr/bin/perl
+checking for gperf... no
+checking gperf len type... not found
+checking for _Bool... yes
+checking for stdbool.h that conforms to C99... yes
+checking for size_t... yes
+checking for working alloca.h... yes
+checking for alloca... yes
+checking for gcc options needed to detect all undeclared functions... none needed
+checking whether strerror_r is declared... yes
+checking whether strerror_r returns char *... no
+checking for library containing dlopen... none required
+checking for library containing backtrace... none required
+checking for backtrace... yes
+checking for library containing socket... none required
+checking for library containing pthread_create... none required
+checking for library containing __atomic_and_fetch... none required
+checking for dladdr... yes
+checking for pthread_condattr_setclock(CLOCK_MONOTONIC)... yes
+checking for pthread_condattr_init... yes
+checking for pthread_cond_timedwait_monotonic... no
+checking for pthread_cancel... yes
+checking for pthread_rwlock_init... yes
+checking for pthread_spin_init... yes
+checking for sem_timedwait... yes
+checking for gettid... yes
+checking for qsort_r... yes
+checking for GNU-style qsort_r... yes
+checking for prctl... yes
+checking for mallinfo... yes
+checking for mallinfo2... yes
+checking for getpass... yes
+checking for closefrom... yes
+checking for getpwnam_r... yes
+checking for getgrnam_r... yes
+checking for getpwuid_r... yes
+checking for chown... yes
+checking for fmemopen... yes
+checking for funopen... no
+checking for mmap... yes
+checking for memrchr... yes
+checking for setlinebuf... yes
+checking for strptime... yes
+checking for dirfd... yes
+checking for sigwaitinfo... yes
+checking for explicit_bzero... yes
+checking for syslog... yes
+checking for sys/sockio.h... no
+checking for sys/syscall.h... yes
+checking for sys/param.h... yes
+checking for glob.h... yes
+checking for net/if_tun.h... no
+checking for net/pfkeyv2.h... no
+checking for netipsec/ipsec.h... no
+checking for netinet6/ipsec.h... no
+checking for linux/udp.h... yes
+checking for netinet/ip6.h... yes
+checking for linux/fib_rules.h... yes
+checking for linux/vm_sockets.h... yes
+checking for struct sockaddr.sa_len... no
+checking for struct sadb_x_policy.sadb_x_policy_priority... yes
+checking for in6addr_any... yes
+checking for in6_pktinfo... yes
+checking for RTM_IFANNOUNCE... no
+checking for IPSEC_MODE_BEET... yes
+checking for IPSEC_DIR_FWD... yes
+checking for RTA_TABLE... yes
+checking for __int128... yes
+checking for GCC __sync operations... yes
+checking for register_printf_specifier... yes
+checking for Windows target... no
+checking for library containing clock_gettime... none required
+checking for clock_gettime... yes
+checking for working __attribute__((packed))... yes
+checking clang... no
+checking x86/x64 target... yes
+checking for EVP_CIPHER_CTX_new in -lcrypto... yes
+checking for openssl/evp.h... yes
+checking if plugin constructors should be resolved statically... no (enabled for static, monolithic builds)
+checking version from Git repository... 6.0.1
+checking for use of -Werror and additional warnings... no
+checking that generated files are newer than configure... done
+configure: creating ./config.status
+config.status: creating Makefile
+config.status: creating conf/Makefile
+config.status: creating fuzz/Makefile
+config.status: creating man/Makefile
+config.status: creating init/Makefile
+config.status: creating init/systemd/Makefile
+config.status: creating init/systemd-starter/Makefile
+config.status: creating src/Makefile
+config.status: creating src/include/Makefile
+config.status: creating src/libstrongswan/Makefile
+config.status: creating src/libstrongswan/plugins/aes/Makefile
+config.status: creating src/libstrongswan/plugins/cmac/Makefile
+config.status: creating src/libstrongswan/plugins/des/Makefile
+config.status: creating src/libstrongswan/plugins/blowfish/Makefile
+config.status: creating src/libstrongswan/plugins/rc2/Makefile
+config.status: creating src/libstrongswan/plugins/md4/Makefile
+config.status: creating src/libstrongswan/plugins/md5/Makefile
+config.status: creating src/libstrongswan/plugins/sha1/Makefile
+config.status: creating src/libstrongswan/plugins/sha2/Makefile
+config.status: creating src/libstrongswan/plugins/sha3/Makefile
+config.status: creating src/libstrongswan/plugins/mgf1/Makefile
+config.status: creating src/libstrongswan/plugins/fips_prf/Makefile
+config.status: creating src/libstrongswan/plugins/gmp/Makefile
+config.status: creating src/libstrongswan/plugins/curve25519/Makefile
+config.status: creating src/libstrongswan/plugins/rdrand/Makefile
+config.status: creating src/libstrongswan/plugins/aesni/Makefile
+config.status: creating src/libstrongswan/plugins/random/Makefile
+config.status: creating src/libstrongswan/plugins/nonce/Makefile
+config.status: creating src/libstrongswan/plugins/hmac/Makefile
+config.status: creating src/libstrongswan/plugins/kdf/Makefile
+config.status: creating src/libstrongswan/plugins/xcbc/Makefile
+config.status: creating src/libstrongswan/plugins/x509/Makefile
+config.status: creating src/libstrongswan/plugins/revocation/Makefile
+config.status: creating src/libstrongswan/plugins/constraints/Makefile
+config.status: creating src/libstrongswan/plugins/acert/Makefile
+config.status: creating src/libstrongswan/plugins/pubkey/Makefile
+config.status: creating src/libstrongswan/plugins/pkcs1/Makefile
+config.status: creating src/libstrongswan/plugins/pkcs7/Makefile
+config.status: creating src/libstrongswan/plugins/pkcs8/Makefile
+config.status: creating src/libstrongswan/plugins/pkcs12/Makefile
+config.status: creating src/libstrongswan/plugins/openxpki/Makefile
+config.status: creating src/libstrongswan/plugins/pgp/Makefile
+config.status: creating src/libstrongswan/plugins/dnskey/Makefile
+config.status: creating src/libstrongswan/plugins/sshkey/Makefile
+config.status: creating src/libstrongswan/plugins/pem/Makefile
+config.status: creating src/libstrongswan/plugins/curl/Makefile
+config.status: creating src/libstrongswan/plugins/files/Makefile
+config.status: creating src/libstrongswan/plugins/winhttp/Makefile
+config.status: creating src/libstrongswan/plugins/unbound/Makefile
+config.status: creating src/libstrongswan/plugins/soup/Makefile
+config.status: creating src/libstrongswan/plugins/ldap/Makefile
+config.status: creating src/libstrongswan/plugins/mysql/Makefile
+config.status: creating src/libstrongswan/plugins/sqlite/Makefile
+config.status: creating src/libstrongswan/plugins/padlock/Makefile
+config.status: creating src/libstrongswan/plugins/openssl/Makefile
+config.status: creating src/libstrongswan/plugins/wolfssl/Makefile
+config.status: creating src/libstrongswan/plugins/gcrypt/Makefile
+config.status: creating src/libstrongswan/plugins/botan/Makefile
+config.status: creating src/libstrongswan/plugins/agent/Makefile
+config.status: creating src/libstrongswan/plugins/keychain/Makefile
+config.status: creating src/libstrongswan/plugins/pkcs11/Makefile
+config.status: creating src/libstrongswan/plugins/chapoly/Makefile
+config.status: creating src/libstrongswan/plugins/ctr/Makefile
+config.status: creating src/libstrongswan/plugins/ccm/Makefile
+config.status: creating src/libstrongswan/plugins/gcm/Makefile
+config.status: creating src/libstrongswan/plugins/af_alg/Makefile
+config.status: creating src/libstrongswan/plugins/drbg/Makefile
+config.status: creating src/libstrongswan/plugins/ml/Makefile
+config.status: creating src/libstrongswan/plugins/test_vectors/Makefile
+config.status: creating src/libstrongswan/tests/Makefile
+config.status: creating src/libipsec/Makefile
+config.status: creating src/libipsec/tests/Makefile
+config.status: creating src/libsimaka/Makefile
+config.status: creating src/libtls/Makefile
+config.status: creating src/libtls/tests/Makefile
+config.status: creating src/libradius/Makefile
+config.status: creating src/libtncif/Makefile
+config.status: creating src/libtnccs/Makefile
+config.status: creating src/libtnccs/plugins/tnc_tnccs/Makefile
+config.status: creating src/libtnccs/plugins/tnc_imc/Makefile
+config.status: creating src/libtnccs/plugins/tnc_imv/Makefile
+config.status: creating src/libtnccs/plugins/tnccs_11/Makefile
+config.status: creating src/libtnccs/plugins/tnccs_20/Makefile
+config.status: creating src/libtnccs/plugins/tnccs_dynamic/Makefile
+config.status: creating src/libpttls/Makefile
+config.status: creating src/libimcv/Makefile
+config.status: creating src/libimcv/plugins/imc_test/Makefile
+config.status: creating src/libimcv/plugins/imv_test/Makefile
+config.status: creating src/libimcv/plugins/imc_scanner/Makefile
+config.status: creating src/libimcv/plugins/imv_scanner/Makefile
+config.status: creating src/libimcv/plugins/imc_os/Makefile
+config.status: creating src/libimcv/plugins/imv_os/Makefile
+config.status: creating src/libimcv/plugins/imc_attestation/Makefile
+config.status: creating src/libimcv/plugins/imv_attestation/Makefile
+config.status: creating src/libimcv/plugins/imc_swima/Makefile
+config.status: creating src/libimcv/plugins/imv_swima/Makefile
+config.status: creating src/libimcv/plugins/imc_hcd/Makefile
+config.status: creating src/libimcv/plugins/imv_hcd/Makefile
+config.status: creating src/charon/Makefile
+config.status: creating src/charon-nm/Makefile
+config.status: creating src/charon-tkm/Makefile
+config.status: creating src/charon-cmd/Makefile
+config.status: creating src/charon-svc/Makefile
+config.status: creating src/charon-systemd/Makefile
+config.status: creating src/libcharon/Makefile
+config.status: creating src/libcharon/plugins/eap_aka/Makefile
+config.status: creating src/libcharon/plugins/eap_aka_3gpp/Makefile
+config.status: creating src/libcharon/plugins/eap_aka_3gpp/tests/Makefile
+config.status: creating src/libcharon/plugins/eap_aka_3gpp2/Makefile
+config.status: creating src/libcharon/plugins/eap_dynamic/Makefile
+config.status: creating src/libcharon/plugins/eap_identity/Makefile
+config.status: creating src/libcharon/plugins/eap_md5/Makefile
+config.status: creating src/libcharon/plugins/eap_gtc/Makefile
+config.status: creating src/libcharon/plugins/eap_sim/Makefile
+config.status: creating src/libcharon/plugins/eap_sim_file/Makefile
+config.status: creating src/libcharon/plugins/eap_sim_pcsc/Makefile
+config.status: creating src/libcharon/plugins/eap_simaka_sql/Makefile
+config.status: creating src/libcharon/plugins/eap_simaka_pseudonym/Makefile
+config.status: creating src/libcharon/plugins/eap_simaka_reauth/Makefile
+config.status: creating src/libcharon/plugins/eap_mschapv2/Makefile
+config.status: creating src/libcharon/plugins/eap_tls/Makefile
+config.status: creating src/libcharon/plugins/eap_ttls/Makefile
+config.status: creating src/libcharon/plugins/eap_peap/Makefile
+config.status: creating src/libcharon/plugins/eap_tnc/Makefile
+config.status: creating src/libcharon/plugins/eap_radius/Makefile
+config.status: creating src/libcharon/plugins/xauth_generic/Makefile
+config.status: creating src/libcharon/plugins/xauth_eap/Makefile
+config.status: creating src/libcharon/plugins/xauth_pam/Makefile
+config.status: creating src/libcharon/plugins/xauth_noauth/Makefile
+config.status: creating src/libcharon/plugins/tnc_ifmap/Makefile
+config.status: creating src/libcharon/plugins/tnc_pdp/Makefile
+config.status: creating src/libcharon/plugins/save_keys/Makefile
+config.status: creating src/libcharon/plugins/socket_default/Makefile
+config.status: creating src/libcharon/plugins/socket_dynamic/Makefile
+config.status: creating src/libcharon/plugins/socket_win/Makefile
+config.status: creating src/libcharon/plugins/bypass_lan/Makefile
+config.status: creating src/libcharon/plugins/connmark/Makefile
+config.status: creating src/libcharon/plugins/counters/Makefile
+config.status: creating src/libcharon/plugins/forecast/Makefile
+config.status: creating src/libcharon/plugins/farp/Makefile
+config.status: creating src/libcharon/plugins/smp/Makefile
+config.status: creating src/libcharon/plugins/sql/Makefile
+config.status: creating src/libcharon/plugins/dnscert/Makefile
+config.status: creating src/libcharon/plugins/ipseckey/Makefile
+config.status: creating src/libcharon/plugins/medsrv/Makefile
+config.status: creating src/libcharon/plugins/medcli/Makefile
+config.status: creating src/libcharon/plugins/addrblock/Makefile
+config.status: creating src/libcharon/plugins/unity/Makefile
+config.status: creating src/libcharon/plugins/uci/Makefile
+config.status: creating src/libcharon/plugins/ha/Makefile
+config.status: creating src/libcharon/plugins/kernel_netlink/Makefile
+config.status: creating src/libcharon/plugins/kernel_pfkey/Makefile
+config.status: creating src/libcharon/plugins/kernel_pfroute/Makefile
+config.status: creating src/libcharon/plugins/kernel_libipsec/Makefile
+config.status: creating src/libcharon/plugins/kernel_wfp/Makefile
+config.status: creating src/libcharon/plugins/kernel_iph/Makefile
+config.status: creating src/libcharon/plugins/whitelist/Makefile
+config.status: creating src/libcharon/plugins/ext_auth/Makefile
+config.status: creating src/libcharon/plugins/lookip/Makefile
+config.status: creating src/libcharon/plugins/error_notify/Makefile
+config.status: creating src/libcharon/plugins/certexpire/Makefile
+config.status: creating src/libcharon/plugins/systime_fix/Makefile
+config.status: creating src/libcharon/plugins/led/Makefile
+config.status: creating src/libcharon/plugins/duplicheck/Makefile
+config.status: creating src/libcharon/plugins/coupling/Makefile
+config.status: creating src/libcharon/plugins/radattr/Makefile
+config.status: creating src/libcharon/plugins/osx_attr/Makefile
+config.status: creating src/libcharon/plugins/p_cscf/Makefile
+config.status: creating src/libcharon/plugins/android_dns/Makefile
+config.status: creating src/libcharon/plugins/android_log/Makefile
+config.status: creating src/libcharon/plugins/stroke/Makefile
+config.status: creating src/libcharon/plugins/vici/Makefile
+config.status: creating src/libcharon/plugins/vici/ruby/Makefile
+config.status: creating src/libcharon/plugins/vici/perl/Makefile
+config.status: creating src/libcharon/plugins/vici/python/Makefile
+config.status: creating src/libcharon/plugins/updown/Makefile
+config.status: creating src/libcharon/plugins/dhcp/Makefile
+config.status: creating src/libcharon/plugins/load_tester/Makefile
+config.status: creating src/libcharon/plugins/resolve/Makefile
+config.status: creating src/libcharon/plugins/attr/Makefile
+config.status: creating src/libcharon/plugins/attr_sql/Makefile
+config.status: creating src/libcharon/plugins/selinux/Makefile
+config.status: creating src/libcharon/tests/Makefile
+config.status: creating src/libtpmtss/Makefile
+config.status: creating src/libtpmtss/plugins/tpm/Makefile
+config.status: creating src/stroke/Makefile
+config.status: creating src/ipsec/Makefile
+config.status: creating src/starter/Makefile
+config.status: creating src/starter/tests/Makefile
+config.status: creating src/_updown/Makefile
+config.status: creating src/aikgen/Makefile
+config.status: creating src/tpm_extendpcr/Makefile
+config.status: creating src/pki/Makefile
+config.status: creating src/pki/man/Makefile
+config.status: creating src/pool/Makefile
+config.status: creating src/libfast/Makefile
+config.status: creating src/manager/Makefile
+config.status: creating src/medsrv/Makefile
+config.status: creating src/checksum/Makefile
+config.status: creating src/conftest/Makefile
+config.status: creating src/pt-tls-client/Makefile
+config.status: creating src/sw-collector/Makefile
+config.status: creating src/sec-updater/Makefile
+config.status: creating src/swanctl/Makefile
+config.status: creating src/cert-enroll/Makefile
+config.status: creating src/xfrmi/Makefile
+config.status: creating scripts/Makefile
+config.status: creating testing/Makefile
+config.status: creating conf/strongswan.conf.5.head
+config.status: creating conf/strongswan.conf.5.tail
+config.status: creating man/ipsec.conf.5
+config.status: creating man/ipsec.secrets.5
+config.status: creating src/charon-cmd/charon-cmd.8
+config.status: creating src/pki/man/pki.1
+config.status: creating src/pki/man/pki---acert.1
+config.status: creating src/pki/man/pki---dn.1
+config.status: creating src/pki/man/pki---est.1
+config.status: creating src/pki/man/pki---estca.1
+config.status: creating src/pki/man/pki---gen.1
+config.status: creating src/pki/man/pki---issue.1
+config.status: creating src/pki/man/pki---keyid.1
+config.status: creating src/pki/man/pki---ocsp.1
+config.status: creating src/pki/man/pki---pkcs12.1
+config.status: creating src/pki/man/pki---pkcs7.1
+config.status: creating src/pki/man/pki---print.1
+config.status: creating src/pki/man/pki---pub.1
+config.status: creating src/pki/man/pki---req.1
+config.status: creating src/pki/man/pki---scep.1
+config.status: creating src/pki/man/pki---scepca.1
+config.status: creating src/pki/man/pki---self.1
+config.status: creating src/pki/man/pki---signcrl.1
+config.status: creating src/pki/man/pki---verify.1
+config.status: creating src/swanctl/swanctl.8
+config.status: creating src/swanctl/swanctl.conf.5.head
+config.status: creating src/swanctl/swanctl.conf.5.tail
+config.status: creating src/pt-tls-client/pt-tls-client.1
+config.status: creating src/sw-collector/sw-collector.8
+config.status: creating src/sec-updater/sec-updater.8
+config.status: creating src/cert-enroll/cert-enroll.8
+config.status: creating config.h
+config.status: config.h is unchanged
+config.status: executing depfiles commands
+config.status: executing libtool commands
+
+ strongSwan will be built with the following plugins
+-----------------------------------------------------
+libstrongswan: random nonce x509 revocation constraints pubkey pkcs1 pkcs7 pgp dnskey sshkey pem openssl pkcs8 xcbc cmac kdf drbg
+libcharon:     attr kernel-netlink resolve socket-default vici updown xauth-generic counters
+libtnccs:     
+libtpmtss:    
+
